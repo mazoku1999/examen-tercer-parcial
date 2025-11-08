@@ -1,5 +1,5 @@
 <div class="min-h-screen bg-black text-white">
-  <!-- Header -->
+
   <header class="border-b border-gray-800 bg-black">
     <div class="container mx-auto px-6 py-6">
       <h1 class="text-2xl font-bold tracking-tight">
@@ -9,102 +9,72 @@
     </div>
   </header>
 
-  <!-- Tabs Navigation -->
+
   <div class="border-b border-gray-800 bg-black">
     <div class="container mx-auto px-6">
       <div class="flex gap-1 overflow-x-auto">
-        <!-- Tab: Países -->
-        <button (click)="cambiarTab('paises')"
-                [class.border-white]="esTabActiva('paises')"
-                [class.text-white]="esTabActiva('paises')"
-                [class.border-transparent]="!esTabActiva('paises')"
-                [class.text-gray-400]="!esTabActiva('paises')"
-                [class.hover:text-gray-300]="!esTabActiva('paises')"
-                class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
+
+        <button (click)="cambiarTab('paises')" [class.border-white]="esTabActiva('paises')"
+          [class.text-white]="esTabActiva('paises')" [class.border-transparent]="!esTabActiva('paises')"
+          [class.text-gray-400]="!esTabActiva('paises')" [class.hover:text-gray-300]="!esTabActiva('paises')"
+          class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
           <lucide-angular [img]="Globe" [size]="18" class="stroke-current"></lucide-angular>
           <span>Países</span>
         </button>
 
-        <!-- Tab: Clima -->
-        <button (click)="cambiarTab('clima')"
-                [class.border-white]="esTabActiva('clima')"
-                [class.text-white]="esTabActiva('clima')"
-                [class.border-transparent]="!esTabActiva('clima')"
-                [class.text-gray-400]="!esTabActiva('clima')"
-                [class.hover:text-gray-300]="!esTabActiva('clima')"
-                class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
+
+        <button (click)="cambiarTab('clima')" [class.border-white]="esTabActiva('clima')"
+          [class.text-white]="esTabActiva('clima')" [class.border-transparent]="!esTabActiva('clima')"
+          [class.text-gray-400]="!esTabActiva('clima')" [class.hover:text-gray-300]="!esTabActiva('clima')"
+          class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
           <lucide-angular [img]="Cloud" [size]="18" class="stroke-current"></lucide-angular>
           <span>Clima</span>
         </button>
 
-        <!-- Tab: Usuarios -->
-        <button (click)="cambiarTab('usuarios')"
-                [class.border-white]="esTabActiva('usuarios')"
-                [class.text-white]="esTabActiva('usuarios')"
-                [class.border-transparent]="!esTabActiva('usuarios')"
-                [class.text-gray-400]="!esTabActiva('usuarios')"
-                [class.hover:text-gray-300]="!esTabActiva('usuarios')"
-                class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
+        <button (click)="cambiarTab('usuarios')" [class.border-white]="esTabActiva('usuarios')"
+          [class.text-white]="esTabActiva('usuarios')" [class.border-transparent]="!esTabActiva('usuarios')"
+          [class.text-gray-400]="!esTabActiva('usuarios')" [class.hover:text-gray-300]="!esTabActiva('usuarios')"
+          class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
           <lucide-angular [img]="Users" [size]="18" class="stroke-current"></lucide-angular>
           <span>Usuarios</span>
         </button>
 
-        <!-- Tab: Perros -->
-        <button (click)="cambiarTab('perros')"
-                [class.border-white]="esTabActiva('perros')"
-                [class.text-white]="esTabActiva('perros')"
-                [class.border-transparent]="!esTabActiva('perros')"
-                [class.text-gray-400]="!esTabActiva('perros')"
-                [class.hover:text-gray-300]="!esTabActiva('perros')"
-                class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
+        <button (click)="cambiarTab('perros')" [class.border-white]="esTabActiva('perros')"
+          [class.text-white]="esTabActiva('perros')" [class.border-transparent]="!esTabActiva('perros')"
+          [class.text-gray-400]="!esTabActiva('perros')" [class.hover:text-gray-300]="!esTabActiva('perros')"
+          class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
           <lucide-angular [img]="Dog" [size]="18" class="stroke-current"></lucide-angular>
           <span>Perros</span>
         </button>
 
-        <!-- Tab: Rick & Morty -->
-        <button (click)="cambiarTab('personajes')"
-                [class.border-white]="esTabActiva('personajes')"
-                [class.text-white]="esTabActiva('personajes')"
-                [class.border-transparent]="!esTabActiva('personajes')"
-                [class.text-gray-400]="!esTabActiva('personajes')"
-                [class.hover:text-gray-300]="!esTabActiva('personajes')"
-                class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
+        <button (click)="cambiarTab('personajes')" [class.border-white]="esTabActiva('personajes')"
+          [class.text-white]="esTabActiva('personajes')" [class.border-transparent]="!esTabActiva('personajes')"
+          [class.text-gray-400]="!esTabActiva('personajes')" [class.hover:text-gray-300]="!esTabActiva('personajes')"
+          class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
           <lucide-angular [img]="Tv" [size]="18" class="stroke-current"></lucide-angular>
           <span>Rick & Morty</span>
         </button>
 
-        <!-- Tab: Crypto -->
-        <button (click)="cambiarTab('criptos')"
-                [class.border-white]="esTabActiva('criptos')"
-                [class.text-white]="esTabActiva('criptos')"
-                [class.border-transparent]="!esTabActiva('criptos')"
-                [class.text-gray-400]="!esTabActiva('criptos')"
-                [class.hover:text-gray-300]="!esTabActiva('criptos')"
-                class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
+        <button (click)="cambiarTab('criptos')" [class.border-white]="esTabActiva('criptos')"
+          [class.text-white]="esTabActiva('criptos')" [class.border-transparent]="!esTabActiva('criptos')"
+          [class.text-gray-400]="!esTabActiva('criptos')" [class.hover:text-gray-300]="!esTabActiva('criptos')"
+          class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
           <lucide-angular [img]="Bitcoin" [size]="18" class="stroke-current"></lucide-angular>
           <span>Crypto</span>
         </button>
 
-        <!-- Tab: Gatos -->
-        <button (click)="cambiarTab('gatos')"
-                [class.border-white]="esTabActiva('gatos')"
-                [class.text-white]="esTabActiva('gatos')"
-                [class.border-transparent]="!esTabActiva('gatos')"
-                [class.text-gray-400]="!esTabActiva('gatos')"
-                [class.hover:text-gray-300]="!esTabActiva('gatos')"
-                class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
+        <button (click)="cambiarTab('gatos')" [class.border-white]="esTabActiva('gatos')"
+          [class.text-white]="esTabActiva('gatos')" [class.border-transparent]="!esTabActiva('gatos')"
+          [class.text-gray-400]="!esTabActiva('gatos')" [class.hover:text-gray-300]="!esTabActiva('gatos')"
+          class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
           <lucide-angular [img]="Cat" [size]="18" class="stroke-current"></lucide-angular>
           <span>Gatos</span>
         </button>
 
-        <!-- Tab: Películas Ghibli -->
-        <button (click)="cambiarTab('ghibli')"
-                [class.border-white]="esTabActiva('ghibli')"
-                [class.text-white]="esTabActiva('ghibli')"
-                [class.border-transparent]="!esTabActiva('ghibli')"
-                [class.text-gray-400]="!esTabActiva('ghibli')"
-                [class.hover:text-gray-300]="!esTabActiva('ghibli')"
-                class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
+        <button (click)="cambiarTab('ghibli')" [class.border-white]="esTabActiva('ghibli')"
+          [class.text-white]="esTabActiva('ghibli')" [class.border-transparent]="!esTabActiva('ghibli')"
+          [class.text-gray-400]="!esTabActiva('ghibli')" [class.hover:text-gray-300]="!esTabActiva('ghibli')"
+          class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
           <lucide-angular [img]="Film" [size]="18" class="stroke-current"></lucide-angular>
           <span>Películas Ghibli</span>
         </button>
@@ -112,7 +82,6 @@
     </div>
   </div>
 
-  <!-- Content Area -->
   <div class="container mx-auto px-6 py-8">
     <app-paises *ngIf="esTabActiva('paises')"></app-paises>
     <app-clima *ngIf="esTabActiva('clima')"></app-clima>
