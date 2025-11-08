@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { PaisesComponent } from './paises-component/paises.component';
 import { ClimaComponent } from './clima-component/clima.component';
 import { UsuariosComponent } from './usuarios-component/usuarios.component';
-import { PokemonComponent } from './pokemon-component/pokemon.component';
+import { PerrosComponent } from './perros-component/perros.component';
 import { PersonajesComponent } from './personajes-component/personajes.component';
 import { CriptosComponent } from './criptos-component/criptos.component';
 import { GatosComponent } from './gatos-component/gatos.component';
 import { GhibliComponent } from './ghibli-component/ghibli.component';
-import { LucideAngularModule, Globe, Cloud, Users, Gamepad2, Tv, Bitcoin, Cat, Film } from 'lucide-angular';
+import { LucideAngularModule, Globe, Cloud, Users, Dog, Tv, Bitcoin, Cat, Film } from 'lucide-angular';
 
 interface Tab {
   id: string;
@@ -22,7 +22,7 @@ interface Tab {
     PaisesComponent,
     ClimaComponent,
     UsuariosComponent,
-    PokemonComponent,
+    PerrosComponent,
     PersonajesComponent,
     CriptosComponent,
     GatosComponent,
@@ -37,7 +37,7 @@ export class App {
   readonly Globe = Globe;
   readonly Cloud = Cloud;
   readonly Users = Users;
-  readonly Gamepad2 = Gamepad2;
+  readonly Dog = Dog;
   readonly Tv = Tv;
   readonly Bitcoin = Bitcoin;
   readonly Cat = Cat;
@@ -47,11 +47,11 @@ export class App {
     { id: 'paises', nombre: 'Países' },
     { id: 'clima', nombre: 'Clima' },
     { id: 'usuarios', nombre: 'Usuarios' },
-    { id: 'pokemon', nombre: 'Pokémon' },
+    { id: 'perros', nombre: 'Perros' },
     { id: 'personajes', nombre: 'Rick & Morty' },
     { id: 'criptos', nombre: 'Crypto' },
-    { id: 'gatos', nombre: 'Cats' },
-    { id: 'ghibli', nombre: 'Ghibli Films' }
+    { id: 'gatos', nombre: 'Gatos' },
+    { id: 'ghibli', nombre: 'Películas Ghibli' }
   ];
 
   tabActiva = signal<string>('paises');

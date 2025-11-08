@@ -49,16 +49,16 @@
           <span>Usuarios</span>
         </button>
 
-        <!-- Tab: Pokémon -->
-        <button (click)="cambiarTab('pokemon')"
-                [class.border-white]="esTabActiva('pokemon')"
-                [class.text-white]="esTabActiva('pokemon')"
-                [class.border-transparent]="!esTabActiva('pokemon')"
-                [class.text-gray-400]="!esTabActiva('pokemon')"
-                [class.hover:text-gray-300]="!esTabActiva('pokemon')"
+        <!-- Tab: Perros -->
+        <button (click)="cambiarTab('perros')"
+                [class.border-white]="esTabActiva('perros')"
+                [class.text-white]="esTabActiva('perros')"
+                [class.border-transparent]="!esTabActiva('perros')"
+                [class.text-gray-400]="!esTabActiva('perros')"
+                [class.hover:text-gray-300]="!esTabActiva('perros')"
                 class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
-          <lucide-angular [img]="Gamepad2" [size]="18" class="stroke-current"></lucide-angular>
-          <span>Pokémon</span>
+          <lucide-angular [img]="Dog" [size]="18" class="stroke-current"></lucide-angular>
+          <span>Perros</span>
         </button>
 
         <!-- Tab: Rick & Morty -->
@@ -85,7 +85,7 @@
           <span>Crypto</span>
         </button>
 
-        <!-- Tab: Cats -->
+        <!-- Tab: Gatos -->
         <button (click)="cambiarTab('gatos')"
                 [class.border-white]="esTabActiva('gatos')"
                 [class.text-white]="esTabActiva('gatos')"
@@ -94,10 +94,10 @@
                 [class.hover:text-gray-300]="!esTabActiva('gatos')"
                 class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
           <lucide-angular [img]="Cat" [size]="18" class="stroke-current"></lucide-angular>
-          <span>Cats</span>
+          <span>Gatos</span>
         </button>
 
-        <!-- Tab: Ghibli Films -->
+        <!-- Tab: Películas Ghibli -->
         <button (click)="cambiarTab('ghibli')"
                 [class.border-white]="esTabActiva('ghibli')"
                 [class.text-white]="esTabActiva('ghibli')"
@@ -106,7 +106,7 @@
                 [class.hover:text-gray-300]="!esTabActiva('ghibli')"
                 class="flex items-center gap-2 px-4 py-3 border-b-2 font-medium text-sm transition-colors whitespace-nowrap">
           <lucide-angular [img]="Film" [size]="18" class="stroke-current"></lucide-angular>
-          <span>Ghibli Films</span>
+          <span>Películas Ghibli</span>
         </button>
       </div>
     </div>
@@ -117,7 +117,7 @@
     <app-paises *ngIf="esTabActiva('paises')"></app-paises>
     <app-clima *ngIf="esTabActiva('clima')"></app-clima>
     <app-usuarios *ngIf="esTabActiva('usuarios')"></app-usuarios>
-    <app-pokemon *ngIf="esTabActiva('pokemon')"></app-pokemon>
+    <app-perros *ngIf="esTabActiva('perros')"></app-perros>
     <app-personajes *ngIf="esTabActiva('personajes')"></app-personajes>
     <app-criptos *ngIf="esTabActiva('criptos')"></app-criptos>
     <app-gatos *ngIf="esTabActiva('gatos')"></app-gatos>
