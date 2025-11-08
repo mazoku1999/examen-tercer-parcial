@@ -1,0 +1,46 @@
+<div>
+  <h2 class="text-xl font-semibold mb-1">Criptomonedas</h2>
+  <p class="text-gray-400 text-sm mb-6">CoinGecko API</p>
+
+  <div class="overflow-x-auto border border-gray-800" *ngIf="!cargando">
+    <table class="w-full">
+      <thead class="border-b border-gray-800 bg-gray-900">
+        <tr>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-400">#</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-400">Moneda</th>
+          <th class="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-400">Precio</th>
+          <th class="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-400">24h %</th>
+          <th class="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-400">Market Cap</th>
+          <th class="px-4 py-3 text-right text-xs font-semibold uppercase tracking-wide text-gray-400">Volumen 24h</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-800">
+        <tr *ngFor="let cripto of criptos; let i = index" class="hover:bg-gray-900 transition-colors">
+          <td class="px-4 py-3 text-gray-400">{{ i + 1 }}</td>
+          <td class="px-4 py-3">
+            <div class="flex items-center gap-3">
+              <img [src]="cripto.imagen" [alt]="cripto.nombre" class="w-6 h-6">
+              <div>
+                <div class="font-medium">{{ cripto.nombre }}</div>
+                <div class="text-xs text-gray-400">{{ cripto.simbolo }}</div>
+              </div>
+            </div>
+          </td>
+          <td class="px-4 py-3 text-right font-medium">{{ formatearPrecio(cripto.precio_actual) }}</td>
+          <td class="px-4 py-3 text-right font-medium" [class.text-green-500]="cripto.cambio_24h > 0"
+            [class.text-red-500]="cripto.cambio_24h < 0">
+            {{ cripto.cambio_24h > 0 ? '+' : '' }}{{ cripto.cambio_24h.toFixed(2) }}%
+          </td>
+          <td class="px-4 py-3 text-right text-gray-400">{{ formatearNumero(cripto.capitalizacion_mercado) }}</td>
+          <td class="px-4 py-3 text-right text-gray-400">{{ formatearNumero(cripto.volumen_24h) }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="text-center py-12" *ngIf="cargando">
+    <div class="inline-block animate-spin rounded-full h-8 w-8 border-2 border-gray-700 border-t-white"></div>
+    <p class="text-gray-400 mt-4 text-sm">Cargando criptomonedas...</p>
+  </div>
+</div>

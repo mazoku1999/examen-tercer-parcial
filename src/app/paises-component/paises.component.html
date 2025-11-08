@@ -1,0 +1,40 @@
+<div>
+  <h2 class="text-xl font-semibold mb-1">Países de América Latina</h2>
+  <p class="text-gray-400 text-sm mb-6">REST Countries API</p>
+
+
+  <div class="overflow-x-auto border border-gray-800" *ngIf="!cargando">
+    <table class="w-full">
+      <thead class="border-b border-gray-800 bg-gray-900">
+        <tr>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-400">Bandera</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-400">País</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-400">Capital</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-400">Población</th>
+          <th class="px-4 py-3 text-left text-xs font-semibold uppercase tracking-wide text-gray-400">Región</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-800">
+        <tr *ngFor="let pais of paises" class="hover:bg-gray-900 transition-colors">
+          <td class="px-4 py-3">
+            <img [src]="pais.bandera" [alt]="pais.nombre.comun" class="w-10 h-6 object-cover border border-gray-700">
+          </td>
+          <td class="px-4 py-3 font-medium">{{ pais.nombre.comun }}</td>
+          <td class="px-4 py-3 text-gray-400">{{ pais.capital[0] }}</td>
+          <td class="px-4 py-3 text-gray-400">{{ formatearNumero(pais.poblacion) }}</td>
+          <td class="px-4 py-3">
+            <span class="px-2 py-1 border border-gray-700 text-gray-400 text-xs font-medium">
+              {{ pais.subregion }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="text-center py-12" *ngIf="cargando">
+    <div class="inline-block animate-spin rounded-full h-8 w-8 border-2 border-gray-700 border-t-white"></div>
+    <p class="text-gray-400 mt-4 text-sm">Cargando datos...</p>
+  </div>
+</div>
